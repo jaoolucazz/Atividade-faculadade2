@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner teclado = new Scanner(System.in);
+
+    System.out.println("Qual o seu assento desejado?: Janela, Corredor ou Meio");
+    String assento = teclado.nextLine();
+    System.out.println("Qual a preferencia por espaço?: Normal ou Espaço Extra");
+    String espaco = teclado.nextLine();
+
+    if (assento.equals("Janela")){
+      if (espaco.equals("Normal")){
+        System.out.println("Assento escolhido: Janela, espaço normal, custo R$300,00");
+      } else if (espaco.equals("Espaço Extra")){
+        System.out.println("Assento escolhido: Janela, espaço extra, custo R$350,00");
+      } 
+    } else if (assento.equals("Corredor")){
+      if (espaco.equals("Normal")){
+        System.out.println("Assento escolhido: Corredor, espaço normal, custo R$280,00");
+      } else if (espaco.equals("Espaço Extra")){
+        System.out.println("Assento escolhido: Corredor, espaço extra, custo R$330,00");
+      } 
+    } else if (assento.equals("Meio")){
+      if (espaco.equals("Normal")){
+        System.out.println("Assento escolhido: Meio, espaço normal, custo R$250,00");
+      } else if (espaco.equals("Espaço Extra")){
+        System.out.println("Assento escolhido: Meio, espaço extra, custo R$300,00");
+      } 
+    }
+    }
+  }
