@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main {
+  public static void main(String[] args) {
+    Scanner teclado = new Scanner(System.in);
+
+    System.out.println("Qual o seu destino de viagem? (Paris, New York ou Toquio)");
+    String destino = teclado.nextLine();
+    System.out.println("Qual a sua preferencia de viagem? (Rapida, Menos escalas ou Barata");
+    String preferencia = teclado.nextLine();
+
+    if (destino.equals("Paris")){
+      if (preferencia.equals("Rapida")){
+        System.out.println("Rota escolhida: Duração 7h - Custo R$ 900,00 - 1 escala");
+    } else if (preferencia.equals("Menos escalas")){
+        System.out.println("Rota escolhida: Duração 10h, custo R$ 850,00, 1 escala");
+    } else if (preferencia.equals("Barata")){
+        System.out.println("Rota escolhida: Duração 12h, custo R$ 750,00, 2 escalas");
+    }
+} else if (destino.equals("New York")){
+      if (preferencia.equals("Rapida")){
+        System.out.println("Rota escolhida: Duração 15h, custo R$ 650,00, 2 escalas ");
+      } else if (preferencia.equals("Menos escalas")){
+        System.out.println("Rota escolhida: Duração 18h, custo R$ 550,00, 3 escalas");
+      } else if (preferencia.equals("Barata")){
+        System.out.println("Rota escolhida: Duração 20h, custo R$ 500,00, 4 escalas");
+      }
+} else if (destino.equals("Toquio")){
+      if (preferencia.equals("Rapida")){
+        System.out.println("Rota escolhida: Duração 20h, custo R$ 1200,00, direto");
+      } else if (preferencia.equals("Menos escalas")){
+        System.out.println("Rota escolhida: Duração 22h, custo R$ 1100,00, 1 escala");
+      } else if (preferencia.equals("Barata")){
+        System.out.println("Rota escolhida: Duração 25h, custo R$ 1000,00, 1 escala");
+      }
+}
+teclado.close();
+  }
+}
