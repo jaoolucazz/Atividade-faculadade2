@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner teclado = new Scanner(System.in);
+String nome_produto;
+double preco1, preco2;
+
+System.out.println("Digite o nome do produto: ");
+nome_produto = teclado.nextLine();
+System.out.println("Digite o preço do produto no primeiro estabelecimento:");    
+preco1 = teclado.nextDouble();
+System.out.println("Digite o preço do produto no segundo estabelecimento:");    
+preco2 = teclado.nextDouble();
+
+if (preco1 < preco2) {
+  System.out.println("O produto "  +  nome_produto  +  " é mais barato no primeiro estabelecimento.");
+  }
+else if (preco2 < preco1) {
+  System.out.println("O produto "  +  nome_produto  +  " é mais barato no segundo estabelecimento");
+  }
+teclado.close();
+  }
+}
