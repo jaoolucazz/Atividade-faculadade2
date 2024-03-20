@@ -1,0 +1,38 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Digite a data de nascimento do atleta (dd/mm/aaaa):");
+        String dataNascimentoStr = teclado.nextLine();
+
+        LocalDate dataNascimento;
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            dataNascimento = LocalDate.parse(dataNascimentoStr, formatter);
+        } catch (DateTimeParseException e) {
+            
+            return;
+        }
+
+        LocalDate dataAtual = LocalDate.now();
+        int idade = dataAtual.getYear() - dataNascimento.getYear();
+
+        String categoria;
+        if (idade <= 10) {
+            categoria = "Infantil";
+        } else if (idade >= 11 && idade <= 17) {
+            categoria = "Juvenil";
+        } else if (idade >= 18 && idade <= 59) {
+            categoria = "Adulto";
+        } else {
+            categoria = "Sênior";
+        }
+
+        System.out.println("Categoria do atleta: " + categoria);
+    }
+}
