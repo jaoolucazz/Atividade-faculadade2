@@ -1,0 +1,48 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+ Scanner teclado = new Scanner(System.in);
+
+System.out.println("Digite o valor do salário: ");
+double salario = teclado.nextDouble();
+System.out.println("Digite a Classificação do funcionario: (A,B,C,D,E, e outros)");
+char classificacao = teclado.next().charAt(0);
+System.out.println("Digite o tempo de serviço: ");
+int anosServico = teclado.nextInt();
+double bonus = salario * classificacao * anosServico;
+
+if (classificacao == 'A') {
+bonus = salario * 0.20;
+if (anosServico > 5) {
+bonus += salario * 0.05;
+  }
+} else if (classificacao == 'B') {
+ bonus = salario * 0.15;
+ if (anosServico > 5) {
+ bonus += salario * 0.05;
+  }
+} else if (classificacao == 'C') {
+  bonus = salario * 0.10;
+  if (anosServico > 5) {
+  bonus += salario * 0.05;
+  }
+} else if (classificacao == 'D') {
+  bonus = salario * 0.05;
+  if (anosServico > 5) {
+  bonus += salario * 0.05;
+  }
+} else if (classificacao == 'E') {
+  bonus = salario * 0.02;
+  if (anosServico > 5) {
+  bonus += salario * 0.05;
+  }
+} else {
+  bonus = 0;
+  if (anosServico > 5) {
+  bonus = salario * 0.05;
+  }
+}
+System.out.println("O bonus é de: R$" + bonus);
+teclado.close();
+  }
+}
