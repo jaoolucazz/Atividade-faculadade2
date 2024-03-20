@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+  Scanner teclado = new Scanner(System.in);
+  int A;
+    int B;
+System.out.println("Digite o valor de A: ");
+  A = teclado.nextInt();
+  System.out.println("Digite o valor de B: ");
+    B = teclado.nextInt();
+    
+  teclado.close();
+ if (A > B)
+      System.out.println("O maior numero é: " + A);
+    else if (B > A);
+    System.out.println("O maior numero é: " + B);
+ }
+}
