@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner teclado = new Scanner(System.in);
+
+System.out.println("Digite o salario: ");
+double salario = teclado.nextDouble();
+
+System.out.println("Digite a classificação do desempenho = A,B,C,outro ");
+char classificacao = teclado.next().charAt(0);
+
+double bonus = salario * classificacao;
+switch (classificacao) {
+case 'A':
+bonus = salario * 0.20;
+break;
+case 'B': 
+bonus = salario * 0.15;
+break;
+case 'C':
+bonus = salario * 0.10;
+break;
+default:
+bonus = 0.0;
+  }
+System.out.println("O valor recebido de bonus é: R$" + bonus);
+teclado.close();
+}
+  }
